@@ -1,62 +1,57 @@
 # <img src="https://raw.githubusercontent.com/nim-lang/assets/master/Art/logo-crown.png" height="28px"/> Nim [![Build Status][badge-nim-travisci]][nim-travisci]
 
-This repository contains the Nim compiler, Nim's stdlib, tools and documentation.
-For more information about Nim, including downloads and documentation for
-the latest release, check out [Nim's website][nim-site].
+このリポジトリには Nimコンパイラ, Nimのstdlib, ツールおよびドキュメントが含まれています。
+もっとNimについて知りたいときは, ドキュメントを含む最新リリースをダウンロードしてください。 [Nimのサイト][nim-site].
 
-## Community
+## コミュニティ(英語)
 [![Join the IRC chat][badge-nim-irc]][nim-irc]
 [![Join the Gitter chat][badge-nim-gitter]][nim-gitter]
 [![Get help][badge-nim-forum-gethelp]][nim-forum]
 [![View Nim posts on Stack Overflow][badge-nim-stackoverflow]][nim-stackoverflow-newest]
 [![Follow @nim_lang on Twitter][badge-nim-twitter]][nim-twitter]
 
-* The [forum][nim-forum] - the best place to ask questions and to discuss Nim.
-* [#nim IRC Channel (Freenode)][nim-irc] - a place to discuss Nim in real-time.
-  Also where most development decisions get made.
-* [Gitter][nim-gitter] - an additional place to discuss Nim in real-time. There
-  is a bridge between Gitter and the IRC channel.
-* [Telegram][nim-telegram] - an additional place to discuss Nim in real-time. There
-  is the official Telegram channel.
-* [Stack Overflow][nim-stackoverflow] - a popular Q/A site for programming related
-  topics that includes posts about Nim.
-* [Github Wiki][nim-wiki] - Misc user-contributed content.
+* [Nimのフォーラム][nim-forum] - Nimについて質問したり, 議論するには最高の場所です
+* [#nim IRCチャンネル(Freenode)][nim-irc] - Nimについてリアルタイムで議論する場所です。
+  また、ほとんどの開発決定はIRCで行われます。
+* [Gitter][nim-gitter] - Nimについてリアルタイムで議論するための補助的な場です。
+  GitterとIRCの間にはブリッジがあります。
+* [Telegram][nim-telegram] - Nimについてリアルタイムで議論するための補助的な場です。
+  これはNimの公式Telegramチャンネルです。
+* [Stack Overflow][nim-stackoverflow] - プログラミング関連の一般的なQ&Aサイト。
+  Nimについてのトピックがあります。
+* [Github Wiki][nim-wiki] - その他のユーザーによるコンテンツ。
 
-## Compiling
-The compiler currently officially supports the following platform and
-architecture combinations:
+## コンパイル
+コンパイラは現在、以下のプラットフォームと
+アーキテクチャの組み合わせを公式にサポートしています:
 
-  * Windows (Windows XP or greater) - x86 and x86_64
-  * Linux (most, if not all, distributions) - x86, x86_64, ppc64 and armv6l
-  * Mac OS X (10.04 or greater) - x86, x86_64 and ppc64
+  * Windows (Windows XP以降) - x86 と x86_64
+  * Linux (すべてではないが、ほとんどをサポート) - x86, x86_64, ppc64 と armv6l
+  * Mac OS X (10.04以降) - x86, x86_64 と ppc64
 
-More platforms are supported, however they are not tested regularly and they
-may not be as stable as the above-listed platforms.
+より多くのプラットフォームがサポートされていますが、定期的にテストされておらず、上記の
+プラットフォームほど安定していない可能性があります。
 
-Compiling the Nim compiler is quite straightforward if you follow these steps:
+次の手順通りに実行するとNimのコンパイルは非常に簡単です:
 
-First, the C source of an older version of the Nim compiler is needed to
-bootstrap the latest version because the Nim compiler itself is written in the
-Nim programming language. Those C sources are available within the 
-[``nim-lang/csources``][csources-repo] repository.
+Nimコンパイラ自体がNimを利用して書かれているため、NimコンパイラのCで書かれた古いバージョンのソースが必要です。
+それらはこちらから入手できます。[``nim-lang/csources``][csources-repo]リポジトリ
 
-Next, to build from source you will need:
 
-  * A C compiler such as ``gcc`` 3.x/later or an alternative such as ``clang``,
-    ``Visual C++`` or ``Intel C++``. It is recommended to use ``gcc`` 3.x or
-    later.
-  * Either ``git`` or ``wget`` to download the needed source repositories.
-  * The ``build-essential`` package when using ``gcc`` on Ubuntu (and likely
-    other distros as well). 
+次に、ビルドに必要なものを用意します:
 
-Then, if you are on a \*nix system or Windows, the following steps should compile
-Nim from source using ``gcc``, ``git`` and the ``koch`` build tool (in the place
-of ``sh build.sh`` you should substitute ``build.bat`` on x86 Windows or
-``build64.bat`` on x86_64 Windows):
+  * ``gcc`` 3.x/以降, ``clang``, ``Visual C++`` や ``Intel C++``などのコンパイラ。
+    特に ``gcc`` 3.x 以降を使うことをお勧めします。
+  * ``git`` もしくは ``wget`` ソースをリポジトリからダウンロードするために利用します。
+  * Ubuntuで``gcc``を利用するときは``build-essential``パッケージを使います。
+    (他のUbuntuディストリビューションでも同様です。) 
 
-**Note: The following commands are for the development version of the compiler.**
-For most users, installing the latest stable version is enough. Check out
-the installation instructions on the website to do so: https://nim-lang.org/install.html.
+次に \*nix システム または Windows を利用している場合は、以下の手順でコンパイルする必要があります。
+Nimをソースから ``gcc``, ``git`` と ``koch`` を利用してビルドする。
+(``sh build.sh`` の代わりにx86 Windowsでは ``build.bat`` を、x86_64 Windowsでは ``build64.bat`` を利用してください。):
+
+**注意: 以下のコマンドは開発版コンパイラのビルド手順です**
+一般ユーザー向けの安定版はこちらです: https://nim-lang.org/install.html.
 
 ```
 git clone https://github.com/nim-lang/Nim.git
@@ -70,96 +65,84 @@ bin/nim c koch
 ./koch tools # Compile Nimble and other tools.
 ```
 
-Finally, once you have finished the build steps (on Windows, Mac or Linux) you
-should add the ``bin`` directory to your PATH.
+最後に、 インストールが完了したら (Windows, Mac  Linuxの場合は) 
+パスに ``bin`` ディレクトリを通すことをお勧めします。
 
 ## Koch
-``koch`` is the build tool used to build various parts of Nim and to generate
-documentation and the website, among other things. The ``koch`` tool can also
-be used to run the Nim test suite. 
+``koch``はNimの様々な部分やドキュメント、Webサイトをを構築するために使用されるビルドツールです。
+``koch``を使用してNimのテスト環境を構築することも可能です。
 
-Assuming that you added Nim's ``bin`` directory to your PATH, you may execute
-the tests using ``./koch tests``. The tests take a while to run, but you
-can run a subset of tests by specifying a category (for example 
-``./koch tests cat async``).
+Nimの``bin``ディレクトリをパスに追加しているなら、
+``./koch tests``でテストを実行できます。テストには時間がかかりますが、
+カテゴリを指定してテストを行うこともできます。``./koch tests cat async``
 
-For more information on the ``koch`` build tool please see the documentation
-within the [doc/koch.rst](doc/koch.rst) file.
+``koch``について詳しくは[doc/koch.rst](doc/koch.rst) を参照してください。
 
 ## Nimble
 
-``nimble`` is Nim's package manager. To learn more about it, see the
-[``nim-lang/nimble``][nimble-repo] repository.
+``nimble`` はNimのパッケージマネジャーです。 詳しくは
+[``nim-lang/nimble``][nimble-repo]を参照してください
 
-## Contributors
+## 貢献者
 
-This project exists thanks to all the people who contribute. [Read on to find out how to contribute](#contributing).
+このプロジェクトは、貢献するすべての方々のおかげで成り立っています。 [Read on to find out how to contribute](#contributing).
 <a href="https://github.com/nim-lang/Nim/graphs/contributors"><img src="https://opencollective.com/Nim/contributors.svg?width=890" /></a>
 
-## Contributing
+## 貢献する
 [![Backers on Open Collective](https://opencollective.com/nim/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/nim/sponsors/badge.svg)](#sponsors)
 [![Setup a bounty via Bountysource][badge-nim-bountysource]][nim-bountysource]
 [![Donate Bitcoins][badge-nim-bitcoin]][nim-bitcoin]
 [![Open Source Helpers](https://www.codetriage.com/nim-lang/nim/badges/users.svg)](https://www.codetriage.com/nim-lang/nim)
 
-We welcome all contributions to Nim regardless of how small or large
-they are. Everything from spelling fixes to new modules to be included in the
-standard library are welcomed and appreciated. Before you start contributing,
-you should familiarize yourself with the following repository structure:
+私たちはどんな小さな修正でも歓迎します。
+標準ライブラリのスペル修正から新たなモジュールの追加まですべてが歓迎され、評価されます。
+貢献を開始する前に、以下のリポジトリ構造について理解しておいてください:
 
-* ``bin/``, ``build/`` - these directories are empty, but are used when Nim is built.
-* ``compiler/`` - the compiler source code. Also includes nimfix, and plugins within
-  ``compiler/nimfix`` and ``compiler/plugins`` respectively.
-* ``nimsuggest`` - the nimsuggest tool that previously lived in the [``nim-lang/nimsuggest``][nimsuggest-repo] repository. 
-* ``config/`` - the configuration for the compiler and documentation generator.
-* ``doc/`` - the documentation files in reStructuredText format.
-* ``lib/`` - the standard library, including:
-    * ``pure/`` - modules in the standard library written in pure Nim.
-    * ``impure/`` - modules in the standard library written in pure Nim with
-    dependencies written in other languages.
-    * ``wrappers/`` - modules which wrap dependencies written in other languages.
-* ``tests/`` - contains categorized tests for the compiler and standard library.
-* ``tools/`` - the tools including ``niminst`` and ``nimweb`` (mostly invoked via
-  ``koch``).
-* ``web/`` - [the Nim website][nim-site].
-* ``koch.nim`` - tool used to bootstrap Nim, generate C sources, build the website,
-  and generate the documentation.
+* ``bin/``, ``build/`` - これらのディレクトリはNimをビルドするまでは空です。
+* ``compiler/`` - コンパイラのソースコード、また``compiler/nimfix``と``compiler/plugins``のコードも含まれます。
+* ``nimsuggest`` - 以前は [``nim-lang/nimsuggest``][nimsuggest-repo] リポジトリにあった nimsuggest ツールです。 
+* ``config/`` - コンパイラとドキュメントジェネレータの設定。
+* ``doc/`` - ReStructuredText形式のドキュメントが格納されています。
+* ``lib/`` - 標準ライブラリ、内容:
+    * ``pure/`` - Nimだけで書かれたライブラリ。
+    * ``impure/`` - Nimで書かれた他の言語に依存するライブラリ。
+    * ``wrappers/`` - 依存するほかの言語によって書かれたライブラリ。
+* ``tests/`` - コンパイラと標準ライブラリのためのテスト。
+* ``tools/`` - ``niminst`` と ``nimweb`` を含む(主に``koch``経由で呼び出される)。
+* ``web/`` - [Nim website][nim-site].
+* ``koch.nim`` - Nimを自動生成するツール、Cソース、Webサイト、ドキュメントを生成するツール。
 
-If you are not familiar with making a pull request using GitHub and/or git, please
-read [this guide][pull-request-instructions].
+もしあなたがGitHubやgitを使ったプルリクエストに慣れていないなら:
+[こちら][pull-request-instructions].
 
-Ideally you should make sure that all tests pass before submitting a pull request.
-However, if you are short on time, you can just run the tests specific to your
-changes by only running the corresponding categories of tests. Travis CI verifies
-that all tests pass before allowing the pull request to be accepted, so only
-running specific tests should be harmless.
-Integration tests should go in ``tests/untestable``.
+プルリクエストを送信する前にすべてのテストに合格することが理想的ですが、時間が足りない場合には
+変更箇所に対応したテストを行うだけでも構いません。
+Travis CIがプルリクエストを受け入れる前にテストします。
+統合テストは ``tests/untestable``です。
 
-If you're looking for ways to contribute, please look at our [issue tracker][nim-issues].
-There are always plenty of issues labelled [``Easy``][nim-issues-easy]; these should
-be a good starting point for an initial contribution to Nim.
+貢献する方法をお探しの場合は[issue tracker][nim-issues]をご覧ください。
+ [``Easy``][nim-issues-easy]ラベルの問題はたくさんあります。
+これらはNimへの貢献の良い出発点となるはずです。
 
-You can also help with the development of Nim by making donations. Donations can be
-made using:
+寄付をしてNimの開発の手助けをすることもできます。寄付は以下から行うことができます:
 
 * [Open Collective](https://opencollective.com/nim)
 * [Bountysource][nim-bountysource]
 * [Bitcoin][nim-bitcoin]
 
-If you have any questions feel free to submit a question on the
-[Nim forum][nim-forum], or via IRC on [the \#nim channel][nim-irc].
+ご質問がありましたら、[Nimフォーラム][nim-forum]やIRC[the \#nim channel][nim-irc]にお寄せください。
 
 
-## Backers
+## 支持者
 
-Thank you to all our backers! [[Become a backer](https://opencollective.com/Nim#backer)]
+感謝します! [[Become a backer](https://opencollective.com/Nim#backer)]
 
 <a href="https://opencollective.com/Nim#backers" target="_blank"><img src="https://opencollective.com/Nim/backers.svg?width=890"></a>
 
 
-## Sponsors
+## スポンサー
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/Nim#sponsor)]
+スポンサーになることでこのプロジェクトをサポートしてください。 ロゴがあなたのウェブサイトへのリンクとともにここに表示されます。[[Become a sponsor](https://opencollective.com/Nim#sponsor)]
 
 <a href="https://opencollective.com/Nim/sponsor/0/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/Nim/sponsor/1/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/1/avatar.svg"></a>
@@ -172,17 +155,17 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/Nim/sponsor/8/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/Nim/sponsor/9/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/9/avatar.svg"></a>
 
-You can also see a list of all our sponsors/backers from various payment services on the [sponsors page](https://nim-lang.org/sponsors.html) of our website.
+当ウェブサイトの[スポンサーページ](https://nim-lang.org/sponsors.html)には、様々な支払いサービスのスポンサー/支援者のリストも表示されます。
 
-## License
-The compiler and the standard library are licensed under the MIT license, except
-for some modules which explicitly state otherwise. As a result you may use any
-compatible license (essentially any license) for your own programs developed with
-Nim. You are explicitly permitted to develop commercial applications using Nim.
+## ライセンス
+コンパイラと標準ライブラリは、MITライセンスの下でライセンスされています。
+すなわち、Nimで開発した独自のプログラムに互換性のあるライセンスを使用することができます。
+Nimを使用して商用アプリケーションを開発することは明示的に許可されています。
 
-Please read the [copying.txt](copying.txt) file for more details.
+ライセンスについての詳細は [copying.txt](copying.txt) をお読みください。
 
 Copyright ﾂｩ 2006-2018 Andreas Rumpf, all rights reserved.
+Translated by koki Kobayashi 2018.
 
 [nim-site]: https://nim-lang.org
 [nim-forum]: https://forum.nim-lang.org
