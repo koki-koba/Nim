@@ -1,10 +1,10 @@
-===============================
-   Nim maintenance script
-===============================
+=================================
+   Nim メンテナンス スクリプト
+=================================
 
-:Version: |nimversion|
+:バージョン: |nimversion|
 
-.. contents::
+.. コンテンツ::
 
 .. raw:: html
   <blockquote><p>
@@ -12,71 +12,55 @@
   </p></blockquote>
 
 
-Introduction
-============
+初めに
+======
 
-The `koch`:idx: program is Nim's maintenance script. It is a replacement
-for make and shell scripting with the advantage that it is much more portable.
-The word *koch* means *cook* in German. ``koch`` is used mainly to build the
-Nim compiler, but it can also be used for other tasks. This document
-describes the supported commands and their options.
+`koch`:idx: プログラムはNimのメンテナンススクリプトです。これは移植性の低いmake/シェルスクリプトの代替品です。kochという言葉はドイツ語で料理を意味します。kochは主にNimコンパイラをビルドするために使用されますが、ほかのタスクにも使用できます。このドキュメントでは、サポートされているコマンドとそのオプションについて説明します。
 
-
-Commands
+コマンド
 ========
 
-boot command
-------------
+boot コマンド
+-------------
 
-The `boot`:idx: command bootstraps the compiler, and it accepts different
-options:
+`boot`:idx: コマンドはコンパイラを自動生成し、複数のオプションを受け入れます。
+オプション:
 
 -d:release
-  By default a debug version is created, passing this option will
-  force a release build, which is much faster and should be preferred
-  unless you are debugging the compiler.
+  デフォルトでは、デバッグバージョンのコンパイラが作成されます。
+  このオプションを渡すと、リリースビルドが作成されます。これははるかに高速であり、
+  コンパイラをデバッグする場合を除いて使用することが推奨されます。
 -d:useLinenoise
-  Use the linenoise library for interactive mode (not needed on Windows).
+  インタラクティブモードにlinenoiseライブラリを渡します(Windowsでは不要)。
 
-After compilation is finished you will hopefully end up with the nim
-compiler in the ``bin`` directory. You can add Nim's ``bin`` directory to
-your ``$PATH`` or use the `install command`_ to place it where it will be
-found.
+コンパイルが終わったら、コンパイラが``bin``ディレクトリに作成されます。
+Nimの``bin``ディレクトリにパスを通すか`install command`_を使って配置します。
 
-csource command
----------------
+csource コマンド:----------------
 
-The `csource`:idx: command builds the C sources for installation. It accepts
-the same options as you would pass to the `boot command`_.
+`csource`:idx:コマンドは、インストールのためのCソースをビルドします。 これは、 `bootコマンド` _に渡すのと同じオプションを受け入れます。
 
-temp command
-------------
+temp コマンド
+-------------
 
-The temp command builds the Nim compiler but with a different final name
-(``nim_temp``), so it doesn't overwrite your normal compiler. You can use
-this command to test different options, the same you would issue for the `boot
-command`_.
+tempコマンドは、Nimコンパイラをビルドしますが、最終的な名前（ `` nim_temp``）が異なるため、通常のコンパイラを上書きしません。
+このコマンドを使用して、 `boot command`_のために発行するオプションと同じオプションをテストすることができます。
 
-test command
-------------
+test コマンド
+-------------
 
-The `test`:idx: command can also be invoked with the alias ``tests``. This
-command will compile and run ``tests/testament/tester.nim``, which is the main
-driver of Nim's test suite. You can pass options to the ``test`` command,
-they will be forwarded to the tester. See its source code for available
-options.
+`test`:idx:コマンドはエイリアス``tests``で起動することもできます。
+このコマンドは、Nimのテストスイートの主なドライバである `` tests/testament/tester.nim``をコンパイルして実行します。
+``test``コマンドにオプションを渡すことができ、それらはテスターに転送されます。
+利用可能なオプションについては、そのソースコードを参照してください。
 
 web command
 -----------
 
-The `web`:idx: command converts the documentation in the ``doc`` directory
-from rst to HTML. It also repeats the same operation but places the result in
-the ``web/upload`` which can be used to update the website at
-https://nim-lang.org.
+`web`:idx:コマンドは``doc``ディレクトリのドキュメントをrstからHTMLに変換します。
+同じ操作を繰り返しますが、結果を `web/upload`に入れます。
+https://nim-lang.orgでウェブサイトを更新するために使用することができます。
 
-By default the documentation will be built in parallel using the number of
-available CPU cores. If any documentation build sub commands fail, they will
-be rerun in serial fashion so that meaninful error output can be gathered for
-inspection. The ``--parallelBuild:n`` switch or configuration option can be
-used to force a specific number of parallel jobs or run everything serially
-from the start (``n == 1``).
+デフォルトでは、ドキュメントは使用可能なCPUコアの数を使用して並列に構築されます。 
+ドキュメンテーション作成のサブコマンドが失敗した場合は、それらをシリアル形式で再実行して、意味のあるエラー出力を検査のために収集することができます。
+`` --parallelBuild：n``スイッチまたは設定オプションを使用して、特定の数の並列ジョブを強制実行したり、開始からすべてを連続して実行することができます（``n == 1``）。
