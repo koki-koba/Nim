@@ -1,16 +1,16 @@
-インストール
+Installation
 ============
 
-Linux/UNIXへのインストール
+Installation on Linux/UNIX
 --------------------------
 
-GNU C
-コンパイラは完全にサポートされていますが、ほかのコンパイラも動作します。
-C コンパイラは殆どのの場合あなたの ``$PATH`` にあるはずです。
-一部のLinuxディストリビューションにはCコンパイラが標準でインストールされていないので、インストールする必要があります。
+The GNU C Compiler is fully supported, other compilers may work. The C compiler
+should be in your ``$PATH`` (most likely the case). Note that some few Linux
+distributions do not ship with a GCC compiler preinstalled - then you have to
+install it.
 
-インストールは適切な ``.tar.xz`` を選択してダウンロードして展開してください。
-The Nim Compiler will stay in this
+Install Nim by downloading the appropriate ``.tar.xz`` file and extracting it
+to a directory of your choice. The Nim Compiler will stay in this
 directory (unless you copy it somewhere else). The compiler does not need
 write access to its directory, so copying the nim folder to ``/opt``
 works.

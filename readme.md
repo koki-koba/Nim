@@ -164,7 +164,8 @@ Nimを使用して商用アプリケーションを開発することは明示的に許可されています。
 
 ライセンスについての詳細は [copying.txt](copying.txt) をお読みください。
 
-Copyright ﾂｩ 2006-2018 Andreas Rumpf, all rights reserved.
+Copyright c 2006-2018 Andreas Rumpf, all rights reserved.
+
 Translated by koki Kobayashi 2018.
 
 [nim-site]: https://nim-lang.org

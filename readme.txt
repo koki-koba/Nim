@@ -1,18 +1,18 @@
-This package contains the Nim compiler, Nim's stdlib, tools and
-documentation.
+このパッケージはNimのコンパイラ、標準ライブラリ、ツール及び
+ドキュメントを含んでいます。
 
-Nim is a compiled, garbage-collected systems programming language which has
-an excellent productivity/performance ratio. Nim's design focuses on
-efficiency, expressiveness, elegance (in the order of priority).
+Nimはコンパイル方式でガベージコレクトシステムを持つプログラミング言語であり、
+優れた生産性とパフォーマンスを兼ね備えています。
+Nimのデザインは、効率、表現力、優雅さに重点を置いています。
 
-Read install.txt for instructions of how to build and install it.
+インストール方法については install.txt を参照してください。
 
-The compiler and the standard library are licensed under the MIT license,
-except for some modules where the documentation suggests otherwise. This means
-that you can use any license for your own programs developed with Nim,
-allowing you to create commercial applications.
+コンパイラと標準ライブラリはMITライセンスの下でライセンスされています。
+これは、Nimで開発した独自のプログラムに任意のライセンスを適用でき、商用
+アプリケーションを作成できることを意味します。
 
-Read copying.txt for more details.
+詳細については copying.txt を参照してください。
 
 Copyright (c) 2006-2018 Andreas Rumpf.
 All rights reserved.
+Translated by Koki Kobayashi 2018.
