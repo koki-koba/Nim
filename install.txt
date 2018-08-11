@@ -1,45 +1,45 @@
-�C���X�g�[��
+インストール
 ============
 
-Linux/UNIX�ւ̃C���X�g�[��
+Linux/UNIXへのインストール
 --------------------------
 
-GNU C �R���p�C���͊��S�ɃT�|�[�g����Ă��܂����A�ق��̃R���p�C�������삵�܂��B
-C �R���p�C���͖w�ǂ̂̏ꍇ���Ȃ��� ``$PATH`` �ɂ���͂��ł��B
-�ꕔ��Linux�f�B�X�g���r���[�V�����ɂ�C�R���p�C�����W���ŃC���X�g�[������Ă��Ȃ��̂ŁA�C���X�g�[������K�v������܂��B
+GNU C コンパイラは完全にサポートされていますが、ほかのコンパイラも動作します。
+C コンパイラは殆どのの場合あなたの ``$PATH`` にあるはずです。
+一部のLinuxディストリビューションにはCコンパイラが標準でインストールされていないので、インストールする必要があります。
 
-�C���X�g�[���͓K�؂� ``.tar.xz`` ��I�����ă_�E�����[�h���ēW�J���Ă��������B
-Nim�R���p�C���͂��̃f�B���N�g���ɂ���܂��B
-�R���p�C���͓���ɏ������݌�����K�v�Ƃ��Ȃ����߁A``opt``�f�B���N�g���ɔz�u����Ɠ��삵�܂��B
+インストールは適切な ``.tar.xz`` を選択してダウンロードして展開してください。
+Nimコンパイラはこのディレクトリにあります。
+コンパイラは動作に書き込み権限を必要としないため、``opt``ディレクトリに配置すると動作します。
 
-���ɃR�}���h�����s���܂�::
+次にコマンドを実行します::
 
   sh build.sh
 
-���̃\�t�g�E�F�A�Ƃ͈قȂ�ANim�̓t�@�C���K�w�S�̂Ƀt�@�C����z�u���܂���B
-����ɂ́A�t�H���_���폜���邾���ō폜�ł���Ƃ������_������܂��B
-���_�͎蓮�� ``PATH``�ɒǉ�����K�v�����邱�Ƃł��B
-�ʂ̕��@�Ƃ��āA ``/usr/bin``�ɃV���{���b�N�����N���쐬������@������܂�::
+他のソフトウェアとは異なり、Nimはファイル階層全体にファイルを配置しません。
+これには、フォルダを削除するだけで削除できるという利点があります。
+欠点は手動で ``PATH``に追加する必要があることです。
+別の方法として、 ``/usr/bin``にシンボリックリンクを作成する方法があります::
 
   [sudo] ln -s $your_install_dir/bin/nim  /usr/bin/nim
 
-�܂��ANim��UNIX�t�@�C���V�X�e���ɔz�u���邽�߂�``install.sh``��``deinstall.sh``������܂��B
-�������ANim���X�V����͖̂ʓ|�ł��B
+また、NimをUNIXファイルシステムに配置するための``install.sh``と``deinstall.sh``もあります。
+しかし、Nimを更新するのは面倒です。
 
-�C���X�g�[�����������邽�߂ɂ́A�ȉ��̂悤��Nim�̃c�[�����r���h����K�v������܂��B
-``nimsuggest``�A ``nimble`` �܂��� ``nimgrep`` ::
+インストールを完了するためには、以下のようなNimのツールもビルドする必要があります。
+``nimsuggest``、 ``nimble`` または ``nimgrep`` ::
 
   nim c koch
   koch tools
 
-``PATH`` �� ``$your_install_dir/bin/nim`` ��ʂ����Ƃ������߂��܂��B
+``PATH`` に ``$your_install_dir/bin/nim`` を通すことをお勧めします。
 
-Macintosh�ւ̃C���X�g�[��
+Macintoshへのインストール
 -------------------------
-MacOS X�̂݃T�|�[�g����Ă��܂��B
-MacOS X��UNIX���x�[�X�ɂ��Ă��邽�߁A��L�̎菇�����삵�܂��B
-�������A���m�̗��R�ɂ��V���{���b�N�����N�@��MacOS X�ł͓��삵�܂���B
-GCC�p��Apple�̊J���җp�c�[�����C���X�g�[�����邩�Aclang���C���X�g�[������K�v������܂��B
+MacOS Xのみサポートされています。
+MacOS XはUNIXをベースにしているため、上記の手順が動作します。
+しかし、未知の理由によりシンボリックリンク法はMacOS Xでは動作しません。
+GCC用のAppleの開発者用ツールをインストールするか、clangをインストールする必要があります。
 
 Installation on Windows
 -----------------------

@@ -15,4 +15,4 @@ Nimのデザインは、効率、表現力、優雅さに重点を置いています。
 
 Copyright (c) 2006-2018 Andreas Rumpf.
 All rights reserved.
-Translated by Koki Kobayashi 2018.
+Translate by Koki Kobayashi. 2018

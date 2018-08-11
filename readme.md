@@ -1,57 +1,57 @@
 # <img src="https://raw.githubusercontent.com/nim-lang/assets/master/Art/logo-crown.png" height="28px"/> Nim [![Build Status][badge-nim-travisci]][nim-travisci]
 
-���̃��|�W�g���ɂ� Nim�R���p�C��, Nim��stdlib, �c�[������уh�L�������g���܂܂�Ă��܂��B
-������Nim�ɂ��Ēm�肽���Ƃ���, �h�L�������g���܂ލŐV�����[�X���_�E�����[�h���Ă��������B [Nim�̃T�C�g][nim-site].
+このリポジトリには Nimコンパイラ, Nimのstdlib, ツールおよびドキュメントが含まれています。
+もっとNimについて知りたいときは, ドキュメントを含む最新リリースをダウンロードしてください。 [Nimのサイト][nim-site].
 
-## �R�~���j�e�B(�p��)
+## コミュニティ(英語)
 [![Join the IRC chat][badge-nim-irc]][nim-irc]
 [![Join the Gitter chat][badge-nim-gitter]][nim-gitter]
 [![Get help][badge-nim-forum-gethelp]][nim-forum]
 [![View Nim posts on Stack Overflow][badge-nim-stackoverflow]][nim-stackoverflow-newest]
 [![Follow @nim_lang on Twitter][badge-nim-twitter]][nim-twitter]
 
-* [Nim�̃t�H�[����][nim-forum] - Nim�ɂ��Ď��₵����, �c�_����ɂ͍ō��̏ꏊ�ł�
-* [#nim IRC�`�����l��(Freenode)][nim-irc] - Nim�ɂ��ă��A���^�C���ŋc�_����ꏊ�ł��B
-  �܂��A�قƂ�ǂ̊J�������IRC�ōs���܂��B
-* [Gitter][nim-gitter] - Nim�ɂ��ă��A���^�C���ŋc�_���邽�߂̕⏕�I�ȏ�ł��B
-  Gitter��IRC�̊Ԃɂ̓u���b�W������܂��B
-* [Telegram][nim-telegram] - Nim�ɂ��ă��A���^�C���ŋc�_���邽�߂̕⏕�I�ȏ�ł��B
-  �����Nim�̌���Telegram�`�����l���ł��B
-* [Stack Overflow][nim-stackoverflow] - �v���O���~���O�֘A�̈�ʓI��Q&A�T�C�g�B
-  Nim�ɂ��Ẵg�s�b�N������܂��B
-* [Github Wiki][nim-wiki] - ���̑��̃��[�U�[�ɂ��R���e���c�B
+* [Nimのフォーラム][nim-forum] - Nimについて質問したり, 議論するには最高の場所です
+* [#nim IRCチャンネル(Freenode)][nim-irc] - Nimについてリアルタイムで議論する場所です。
+  また、ほとんどの開発決定はIRCで行われます。
+* [Gitter][nim-gitter] - Nimについてリアルタイムで議論するための補助的な場です。
+  GitterとIRCの間にはブリッジがあります。
+* [Telegram][nim-telegram] - Nimについてリアルタイムで議論するための補助的な場です。
+  これはNimの公式Telegramチャンネルです。
+* [Stack Overflow][nim-stackoverflow] - プログラミング関連の一般的なQ&Aサイト。
+  Nimについてのトピックがあります。
+* [Github Wiki][nim-wiki] - その他のユーザーによるコンテンツ。
 
-## �R���p�C��
-�R���p�C���͌��݁A�ȉ��̃v���b�g�t�H�[����
-�A�[�L�e�N�`���̑g�ݍ��킹�������ɃT�|�[�g���Ă��܂�:
+## コンパイル
+コンパイラは現在、以下のプラットフォームと
+アーキテクチャの組み合わせを公式にサポートしています:
 
-  * Windows (Windows XP�ȍ~) - x86 �� x86_64
-  * Linux (���ׂĂł͂Ȃ����A�قƂ�ǂ��T�|�[�g) - x86, x86_64, ppc64 �� armv6l
-  * Mac OS X (10.04�ȍ~) - x86, x86_64 �� ppc64
+  * Windows (Windows XP以降) - x86 と x86_64
+  * Linux (すべてではないが、ほとんどをサポート) - x86, x86_64, ppc64 と armv6l
+  * Mac OS X (10.04以降) - x86, x86_64 と ppc64
 
-��葽���̃v���b�g�t�H�[�����T�|�[�g����Ă��܂����A����I�Ƀe�X�g����Ă��炸�A��L��
-�v���b�g�t�H�[���قǈ��肵�Ă��Ȃ��\��������܂��B
+より多くのプラットフォームがサポートされていますが、定期的にテストされておらず、上記の
+プラットフォームほど安定していない可能性があります。
 
-���̎菇�ʂ�Ɏ��s�����Nim�̃R���p�C���͔��ɊȒP�ł�:
+次の手順通りに実行するとNimのコンパイルは非常に簡単です:
 
-Nim�R���p�C�����̂�Nim�𗘗p���ď�����Ă��邽�߁ANim�R���p�C����C�ŏ����ꂽ�Â��o�[�W�����̃\�[�X���K�v�ł��B
-�����͂����炩�����ł��܂��B[``nim-lang/csources``][csources-repo]���|�W�g��
+Nimコンパイラ自体がNimを利用して書かれているため、NimコンパイラのCで書かれた古いバージョンのソースが必要です。
+それらはこちらから入手できます。[``nim-lang/csources``][csources-repo]リポジトリ
 
 
-���ɁA�r���h�ɕK�v�Ȃ��̂�p�ӂ��܂�:
+次に、ビルドに必要なものを用意します:
 
-  * ``gcc`` 3.x/�ȍ~, ``clang``, ``Visual C++`` �� ``Intel C++``�Ȃǂ̃R���p�C���B
-    ���� ``gcc`` 3.x �ȍ~���g�����Ƃ������߂��܂��B
-  * ``git`` �������� ``wget`` �\�[�X�����|�W�g������_�E�����[�h���邽�߂ɗ��p���܂��B
-  * Ubuntu��``gcc``�𗘗p����Ƃ���``build-essential``�p�b�P�[�W���g���܂��B
-    (����Ubuntu�f�B�X�g���r���[�V�����ł����l�ł��B) 
+  * ``gcc`` 3.x/以降, ``clang``, ``Visual C++`` や ``Intel C++``などのコンパイラ。
+    特に ``gcc`` 3.x 以降を使うことをお勧めします。
+  * ``git`` もしくは ``wget`` ソースをリポジトリからダウンロードするために利用します。
+  * Ubuntuで``gcc``を利用するときは``build-essential``パッケージを使います。
+    (他のUbuntuディストリビューションでも同様です。) 
 
-���� \*nix �V�X�e�� �܂��� Windows �𗘗p���Ă���ꍇ�́A�ȉ��̎菇�ŃR���p�C������K�v������܂��B
-Nim���\�[�X���� ``gcc``, ``git`` �� ``koch`` �𗘗p���ăr���h����B
-(``sh build.sh`` �̑����x86 Windows�ł� ``build.bat`` ���Ax86_64 Windows�ł� ``build64.bat`` �𗘗p���Ă��������B):
+次に \*nix システム または Windows を利用している場合は、以下の手順でコンパイルする必要があります。
+Nimをソースから ``gcc``, ``git`` と ``koch`` を利用してビルドする。
+(``sh build.sh`` の代わりにx86 Windowsでは ``build.bat`` を、x86_64 Windowsでは ``build64.bat`` を利用してください。):
 
-**����: �ȉ��̃R�}���h�͊J���ŃR���p�C���̃r���h�菇�ł�**
-��ʃ��[�U�[�����̈���ł͂�����ł�: https://nim-lang.org/install.html.
+**注意: 以下のコマンドは開発版コンパイラのビルド手順です**
+一般ユーザー向けの安定版はこちらです: https://nim-lang.org/install.html.
 
 ```
 git clone https://github.com/nim-lang/Nim.git
@@ -65,84 +65,84 @@ bin/nim c koch
 ./koch tools # Compile Nimble and other tools.
 ```
 
-�Ō�ɁA �C���X�g�[�������������� (Windows, Mac  Linux�̏ꍇ��) 
-�p�X�� ``bin`` �f�B���N�g����ʂ����Ƃ������߂��܂��B
+最後に、 インストールが完了したら (Windows, Mac  Linuxの場合は) 
+パスに ``bin`` ディレクトリを通すことをお勧めします。
 
 ## Koch
-``koch``��Nim�̗l�X�ȕ�����h�L�������g�AWeb�T�C�g�����\�z���邽�߂Ɏg�p�����r���h�c�[���ł��B
-``koch``���g�p����Nim�̃e�X�g�����\�z���邱�Ƃ��\�ł��B
+``koch``はNimの様々な部分やドキュメント、Webサイトをを構築するために使用されるビルドツールです。
+``koch``を使用してNimのテスト環境を構築することも可能です。
 
-Nim��``bin``�f�B���N�g�����p�X�ɒǉ����Ă���Ȃ�A
-``./koch tests``�Ńe�X�g�����s�ł��܂��B�e�X�g�ɂ͎��Ԃ�������܂����A
-�J�e�S�����w�肵�ăe�X�g���s�����Ƃ��ł��܂��B``./koch tests cat async``
+Nimの``bin``ディレクトリをパスに追加しているなら、
+``./koch tests``でテストを実行できます。テストには時間がかかりますが、
+カテゴリを指定してテストを行うこともできます。``./koch tests cat async``
 
-``koch``�ɂ��ďڂ�����[doc/koch.rst](doc/koch.rst) ���Q�Ƃ��Ă��������B
+``koch``について詳しくは[doc/koch.rst](doc/koch.rst) を参照してください。
 
 ## Nimble
 
-``nimble`` ��Nim�̃p�b�P�[�W�}�l�W���[�ł��B �ڂ�����
-[``nim-lang/nimble``][nimble-repo]���Q�Ƃ��Ă�������
+``nimble`` はNimのパッケージマネジャーです。 詳しくは
+[``nim-lang/nimble``][nimble-repo]を参照してください
 
-## �v����
+## 貢献者
 
-���̃v���W�F�N�g�́A�v�����邷�ׂĂ̕��X�̂������Ő��藧���Ă��܂��B [Read on to find out how to contribute](#contributing).
+このプロジェクトは、貢献するすべての方々のおかげで成り立っています。 [Read on to find out how to contribute](#contributing).
 <a href="https://github.com/nim-lang/Nim/graphs/contributors"><img src="https://opencollective.com/Nim/contributors.svg?width=890" /></a>
 
-## �v������
+## 貢献する
 [![Backers on Open Collective](https://opencollective.com/nim/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/nim/sponsors/badge.svg)](#sponsors)
 [![Setup a bounty via Bountysource][badge-nim-bountysource]][nim-bountysource]
 [![Donate Bitcoins][badge-nim-bitcoin]][nim-bitcoin]
 [![Open Source Helpers](https://www.codetriage.com/nim-lang/nim/badges/users.svg)](https://www.codetriage.com/nim-lang/nim)
 
-�������͂ǂ�ȏ����ȏC���ł����}���܂��B
-�W�����C�u�����̃X�y���C������V���ȃ��W���[���̒ǉ��܂ł��ׂĂ����}����A�]������܂��B
-�v�����J�n����O�ɁA�ȉ��̃��|�W�g���\���ɂ��ė������Ă����Ă�������:
+私たちはどんな小さな修正でも歓迎します。
+標準ライブラリのスペル修正から新たなモジュールの追加まですべてが歓迎され、評価されます。
+貢献を開始する前に、以下のリポジトリ構造について理解しておいてください:
 
-* ``bin/``, ``build/`` - �����̃f�B���N�g����Nim���r���h����܂ł͋�ł��B
-* ``compiler/`` - �R���p�C���̃\�[�X�R�[�h�A�܂�``compiler/nimfix``��``compiler/plugins``�̃R�[�h���܂܂�܂��B
-* ``nimsuggest`` - �ȑO�� [``nim-lang/nimsuggest``][nimsuggest-repo] ���|�W�g���ɂ����� nimsuggest �c�[���ł��B 
-* ``config/`` - �R���p�C���ƃh�L�������g�W�F�l���[�^�̐ݒ�B
-* ``doc/`` - ReStructuredText�`���̃h�L�������g���i�[����Ă��܂��B
-* ``lib/`` - �W�����C�u�����A���e:
-    * ``pure/`` - Nim�����ŏ����ꂽ���C�u�����B
-    * ``impure/`` - Nim�ŏ����ꂽ���̌���Ɉˑ����郉�C�u�����B
-    * ``wrappers/`` - �ˑ�����ق��̌���ɂ���ď����ꂽ���C�u�����B
-* ``tests/`` - �R���p�C���ƕW�����C�u�����̂��߂̃e�X�g�B
-* ``tools/`` - ``niminst`` �� ``nimweb`` ���܂�(���``koch``�o�R�ŌĂяo�����)�B
+* ``bin/``, ``build/`` - これらのディレクトリはNimをビルドするまでは空です。
+* ``compiler/`` - コンパイラのソースコード、また``compiler/nimfix``と``compiler/plugins``のコードも含まれます。
+* ``nimsuggest`` - 以前は [``nim-lang/nimsuggest``][nimsuggest-repo] リポジトリにあった nimsuggest ツールです。 
+* ``config/`` - コンパイラとドキュメントジェネレータの設定。
+* ``doc/`` - ReStructuredText形式のドキュメントが格納されています。
+* ``lib/`` - 標準ライブラリ、内容:
+    * ``pure/`` - Nimだけで書かれたライブラリ。
+    * ``impure/`` - Nimで書かれた他の言語に依存するライブラリ。
+    * ``wrappers/`` - 依存するほかの言語によって書かれたライブラリ。
+* ``tests/`` - コンパイラと標準ライブラリのためのテスト。
+* ``tools/`` - ``niminst`` と ``nimweb`` を含む(主に``koch``経由で呼び出される)。
 * ``web/`` - [Nim website][nim-site].
-* ``koch.nim`` - Nim��������������c�[���AC�\�[�X�AWeb�T�C�g�A�h�L�������g�𐶐�����c�[���B
+* ``koch.nim`` - Nimを自動生成するツール、Cソース、Webサイト、ドキュメントを生成するツール。
 
-�������Ȃ���GitHub��git���g�����v�����N�G�X�g�Ɋ���Ă��Ȃ��Ȃ�:
-[������][pull-request-instructions].
+もしあなたがGitHubやgitを使ったプルリクエストに慣れていないなら:
+[こちら][pull-request-instructions].
 
-�v�����N�G�X�g�𑗐M����O�ɂ��ׂẴe�X�g�ɍ��i���邱�Ƃ����z�I�ł����A���Ԃ�����Ȃ��ꍇ�ɂ�
-�ύX�ӏ��ɑΉ������e�X�g���s�������ł��\���܂���B
-Travis CI���v�����N�G�X�g���󂯓����O�Ƀe�X�g���܂��B
-�����e�X�g�� ``tests/untestable``�ł��B
+プルリクエストを送信する前にすべてのテストに合格することが理想的ですが、時間が足りない場合には
+変更箇所に対応したテストを行うだけでも構いません。
+Travis CIがプルリクエストを受け入れる前にテストします。
+統合テストは ``tests/untestable``です。
 
-�v��������@�����T���̏ꍇ��[issue tracker][nim-issues]���������������B
- [``Easy``][nim-issues-easy]���x���̖��͂������񂠂�܂��B
-������Nim�ւ̍v���̗ǂ��o���_�ƂȂ�͂��ł��B
+貢献する方法をお探しの場合は[issue tracker][nim-issues]をご覧ください。
+ [``Easy``][nim-issues-easy]ラベルの問題はたくさんあります。
+これらはNimへの貢献の良い出発点となるはずです。
 
-��t������Nim�̊J���̎菕�������邱�Ƃ��ł��܂��B��t�͈ȉ�����s�����Ƃ��ł��܂�:
+寄付をしてNimの開発の手助けをすることもできます。寄付は以下から行うことができます:
 
 * [Open Collective](https://opencollective.com/nim)
 * [Bountysource][nim-bountysource]
 * [Bitcoin][nim-bitcoin]
 
-�����₪����܂�����A[Nim�t�H�[����][nim-forum]��IRC[the \#nim channel][nim-irc]�ɂ��񂹂��������B
+ご質問がありましたら、[Nimフォーラム][nim-forum]やIRC[the \#nim channel][nim-irc]にお寄せください。
 
 
-## �x����
+## 支持者
 
-���ӂ��܂�! [[Become a backer](https://opencollective.com/Nim#backer)]
+感謝します! [[Become a backer](https://opencollective.com/Nim#backer)]
 
 <a href="https://opencollective.com/Nim#backers" target="_blank"><img src="https://opencollective.com/Nim/backers.svg?width=890"></a>
 
 
-## �X�|���T�[
+## スポンサー
 
-�X�|���T�[�ɂȂ邱�Ƃł��̃v���W�F�N�g���T�|�[�g���Ă��������B ���S�����Ȃ��̃E�F�u�T�C�g�ւ̃����N�ƂƂ��ɂ����ɕ\������܂��B[[Become a sponsor](https://opencollective.com/Nim#sponsor)]
+スポンサーになることでこのプロジェクトをサポートしてください。 ロゴがあなたのウェブサイトへのリンクとともにここに表示されます。[[Become a sponsor](https://opencollective.com/Nim#sponsor)]
 
 <a href="https://opencollective.com/Nim/sponsor/0/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/0/avatar.svg"></a>
 <a href="https://opencollective.com/Nim/sponsor/1/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/1/avatar.svg"></a>
@@ -155,18 +155,18 @@ Travis CI���v�����N�G�X�g���󂯓����O�Ƀe�X�g���܂��B
 <a href="https://opencollective.com/Nim/sponsor/8/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/Nim/sponsor/9/website" target="_blank"><img src="https://opencollective.com/Nim/sponsor/9/avatar.svg"></a>
 
-���E�F�u�T�C�g��[�X�|���T�[�y�[�W](https://nim-lang.org/sponsors.html)�ɂ́A�l�X�Ȏx�����T�[�r�X�̃X�|���T�[/�x���҂̃��X�g���\������܂��B
+当ウェブサイトの[スポンサーページ](https://nim-lang.org/sponsors.html)には、様々な支払いサービスのスポンサー/支援者のリストも表示されます。
 
-## ���C�Z���X
-�R���p�C���ƕW�����C�u�����́AMIT���C�Z���X�̉��Ń��C�Z���X����Ă��܂��B
-���Ȃ킿�ANim�ŊJ�������Ǝ��̃v���O�����Ɍ݊����̂��郉�C�Z���X���g�p���邱�Ƃ��ł��܂��B
-Nim���g�p���ď��p�A�v���P�[�V�������J�����邱�Ƃ͖����I�ɋ�����Ă��܂��B
+## ライセンス
+コンパイラと標準ライブラリは、MITライセンスの下でライセンスされています。
+すなわち、Nimで開発した独自のプログラムに互換性のあるライセンスを使用することができます。
+Nimを使用して商用アプリケーションを開発することは明示的に許可されています。
 
-���C�Z���X�ɂ��Ă̏ڍׂ� [copying.txt](copying.txt) �����ǂ݂��������B
+ライセンスについての詳細は [copying.txt](copying.txt) をお読みください。
 
-Copyright c 2006-2018 Andreas Rumpf, all rights reserved.
+Copyright © 2006-2018 Andreas Rumpf, all rights reserved.
 
-Translated by koki Kobayashi 2018.
+Translate by koki Kobayashi. 2018
 
 [nim-site]: https://nim-lang.org
 [nim-forum]: https://forum.nim-lang.org
